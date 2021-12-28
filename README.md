@@ -20,4 +20,4 @@
 
 
 ### 打赏
-![qian](https://gitee.com/huang-hai-deng/image/blob/master/qian.png)
+![qian](https://gitee.com/huang-hai-deng/image/raw/master/weixin.png)
