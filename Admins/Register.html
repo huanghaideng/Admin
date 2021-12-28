@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--    如下配置是作用于适配移动端-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--开源项目url地址：
+    https://gitee.com/huang-hai-deng-->
+    <meta name="keywords" content="彼岸花,注册模板,www.higanbana.xin">
+    <meta name="description" content="一个开源的注册模板，非常好看的UI设计">
+    <title>注册</title>
+
+<!--开源项目url地址：
+    https://gitee.com/huang-hai-deng-->
+    <style>
+        /* 去掉默认样式 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 添加背景颜色    */
+        body{
+            background: #74ebd5;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        /*
+        开源项目url地址：
+    https://gitee.com/huang-hai-deng
+    */
+        /*================================================================================*/
+        /* 登录  整体布局    main标签 */
+        main{
+            margin: 100px auto;
+            width: 70%;
+            height: 500px;
+            background-color: rgba(250,250,250,0.5);
+            display: flex;
+            border-radius: 30px;
+        }
+        /*
+        开源项目url地址：
+    https://gitee.com/huang-hai-deng
+    */
+        /*================================================================================*/
+        /* 登录模块   */
+        .main-left{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-left h2{  /* 文字 */
+            color: #7F00FF;
+            font-size: 3rem;
+            font-family: 楷体;
+        }
+
+        .main-left-form{  /* 表单整体布局   form */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-left-form-email,.main-left-form-password{  /* 邮箱和密码的input */
+            width: 75%;
+            height: 40px;
+            margin-top: 30px;
+            border: deepskyblue 1px solid;
+        }
+        .main-left-form-email:hover{
+            height: 42px;
+        }
+        .main-left-form-password:hover{
+            height: 42px;
+        }
+
+        .main-left-form-box{/* 输入认证码input和获取验证码input */
+            margin-top: 15px;
+            width: 75%;
+            height: 40px;
+        }
+        .main-left-form-box-rzm{  /* 认证码输入框 */
+            width: 70%;
+            height: 25px;
+            border: deepskyblue 1px solid;
+        }
+        .main-left-form-box-rzm:hover{
+            height: 29px;
+        }
+        .main-left-form-box-button{  /* 获取认证码按钮 */
+            padding: 4px 10px;
+            background-color: rgba(255,255,255,0.7);
+            color: deepskyblue;
+            border: skyblue 1px solid;
+            border-radius: 10px;
+        }
+        .main-left-form-box-button:hover{
+            padding: 4px 14px;
+        }
+
+        .main-left-form-submit{  /* 登录提交按钮 input */
+            width: 40%;
+            margin-top: 30px;
+            padding: 5px 15px;
+            border-radius: 10px;
+            border: skyblue 1px solid;
+            /* 背景颜色 */
+            background: #7F00FF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            color: snow;
+        }
+        .main-left-form-submit:hover{
+            padding: 7px 17px;
+        }
+
+        .main-left-a{  /* 底部的导航栏   */
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .main-left-a a{
+            text-decoration: none;
+            font-size:20px;
+            font-family: "微軟正黑體 Light";
+        }
+        .main-left-a a:hover{
+            color: red;
+        }
+
+        /*
+        开源项目url地址：
+    https://gitee.com/huang-hai-deng
+    */
+        /*================================================================================*/
+        /* 图片展示的模块 */
+        .main-right{
+            width: 50%;
+            height: 100%;
+            background-color: fuchsia;
+        }
+        .main-right img{  /* 图片的大小配置 */
+            width: 100%;
+            height: 100%;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        /*
+        开源项目url地址：
+    https://gitee.com/huang-hai-deng
+    */
+        /*================================================================================*/
+        /*        响应式布局(断点布局   屏幕小于 1000px时，执行这段配置)*/
+        @media (max-width: 1000px) {
+            /*  主体的宽度为90%*/
+            main{
+                width: 90%;
+            }
+            /* 登录模块   */
+            .main-left{
+                width: 100%;
+            }
+
+            .main-left h2{  /* 文字 */
+                font-size: 2rem;
+            }
+
+            .main-left-form{  /* 表单整体布局   form */
+                width: 100%;
+            }
+
+            .main-left-form-email,.main-left-form-password{  /* 邮箱和密码的input */
+                width: 85%;
+            }
+            .main-left-form-box{/* 输入认证码input和获取验证码input */
+                width: 85%;
+            }
+            /*
+            开源项目url地址：
+        https://gitee.com/huang-hai-deng
+        */
+
+
+            .main-left-form-submit{  /* 登录提交按钮 input */
+                width: 50%;
+                font-size: 15px;
+                padding: 10px 0;
+            }
+
+            /*    隐藏图片 */
+            .main-right{
+                display: none;
+            }
+        }
+
+        @media (max-width: 1212px) {
+            .main-left-form-box-rzm{  /* 认证码输入框 */
+                width: 55%;
+
+            }
+        }
+        /*
+开源项目url地址：
+https://gitee.com/huang-hai-deng
+*/
+    </style>
+</head>
+<body>
+<!--
+        开源项目url地址：
+    https://gitee.com/huang-hai-deng
+-->
+<main>
+    <!--
+            开源项目url地址：
+        https://gitee.com/huang-hai-deng
+    --
+        <!--    登录form表单-->
+    <div class="main-left">
+        <h2>注册</h2>
+        <form class="main-left-form" method="post" action="#">
+            <input name="email" type="email" class="main-left-form-email" placeholder="请输入邮箱:xxxx@qq.com">
+            <input name="password" type="password" class="main-left-form-password" placeholder="请输入密码">
+            <input name="password" type="password" class="main-left-form-password" placeholder="确认输入密码">
+            <div class="main-left-form-box">
+                <input name="rzm" type="text" class="main-left-form-box-rzm" placeholder="请输入6位认证码">
+                <input value="获取认证码" type="button" class="main-left-form-box-button" id="buttons">
+            </div>
+            <input value="注册" type="submit" class="main-left-form-submit">
+        </form>
+
+        <div class="main-left-a">
+            <a href="#">返回首页</a>
+        </div>
+    </div>
+
+    <!--
+            开源项目url地址：
+        https://gitee.com/huang-hai-deng
+    -->
+    <!--    展示图片或者视频 -->
+    <div class="main-right">
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-12-05%2F5c078b4f258fe.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1643082441&t=5679d3820b5a4c519174a69b681238dc">
+    </div>
+
+</main>
+
+<!--
+        开源项目url地址：
+    https://gitee.com/huang-hai-deng
+-->
+<script type="text/javascript">
+
+    /*
+    * 开源项目url地址：
+    https://gitee.com/huang-hai-deng
+    * */
+//    写一个执行60秒倒计时，获取验证码
+
+//    定义几个变量
+    var element = document.getElementById("buttons"); // 点击事件按钮变量
+    var content = 60;  // 计数器 变量
+    var tu = false;  // 是否执行定时函数 变量
+    var time = null;  //  定时函数变量声明
+
+//  点击事件执行函数
+    element.onclick = function (){
+        //  调用执行定时函数的函数
+        zhi();
+    }
+
+//    定义执行定时函数的函数声明
+var zhi = function (){
+    tu = true; // 当点击事件触发函数时，就把tu变量变为true
+
+    if (tu === true){ // 判断  tu是否为true
+        //  这是定时函数声明
+        time = setInterval(cf,1000)
+    }
+}
+//  重复执行的函数
+var cf = function (){
+
+    content--; // 计数器递减 1
+    element.value = content + "秒重新发送";
+    element.disabled = true;
+
+    if (content === 0){ // 当计数器为0时，执行段if语句
+
+        element.value = "获取认证码";
+        element.disabled = false;
+
+        tu = false;  // 把tu变成false
+        content = 60;  // 把content计数器变成默认值
+        clearInterval(time);  // 退出定时函数
+    }
+}
+
+    /*
+    * 开源项目url地址：
+    https://gitee.com/huang-hai-deng
+    * */
+</script>
+</body>
+</html>
